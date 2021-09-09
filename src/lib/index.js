@@ -1,4 +1,3 @@
+import { overrideConsole } from './components/console.js';
 
-import greeting from './components/greeting.js';
-
-export { greeting }; 
+export { overrideConsole };
