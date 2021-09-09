@@ -1,0 +1,31 @@
+{
+	"name": "@sanjaydookhoo/nodejs-better-console",
+	"version": "1.0.0",
+	"description": "",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon src/index.js",
+		"build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/cli": "^7.15.4",
+		"@babel/core": "^7.15.5",
+		"@babel/preset-env": "^7.15.4",
+		"nodemon": "^2.0.12"
+	},
+	"dependencies": {
+		"@babel/polyfill": "^7.12.1"
+	},
+	"type": "module",
+	"module": "dist/index.js",
+	"typings": "dist/index.d.ts",
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"repository": "https://github.com/SanjayDookhoo/nodejs-better-console.git"
+}
