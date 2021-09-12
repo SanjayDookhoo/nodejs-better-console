@@ -1,4 +1,4 @@
-import { overrideConsole } from './lib/index.js';
+import { overrideConsole } from '../lib/index.js';
 import test from './component/test.js';
 
 const context_test = () => {
