@@ -70,10 +70,8 @@ let print_config = {
 	context: './',
 	obj_depth: null, // object nested depth that is shown in console log, null means show absolutely everything
 	show_timestamp: true,
-	filter: {
-		console_method: ['debug', 'log', 'warn', 'error'],
-		output: '',
-	},
+	filter_console_method: ['debug', 'log', 'warn', 'error'],
+	filter_console_output: '',
 };
 
 const setPrintConfig = (config) => {
@@ -81,7 +79,9 @@ const setPrintConfig = (config) => {
 };
 
 const filter_output_check = (str) => {
-	return str.toLowerCase().includes(print_config.filter.output.toLowerCase());
+	return str
+		.toLowerCase()
+		.includes(print_config.filter_console_output.toString().toLowerCase());
 };
 
 const should_output = ({ obj }) => {
@@ -111,7 +111,7 @@ const should_output = ({ obj }) => {
 		return !temp;
 	} else {
 		// _console('primitive');
-		return filter_output_check(obj);
+		return filter_output_check(obj.toString());
 	}
 };
 
@@ -125,11 +125,11 @@ const overrideConsole = (config) => {
 	['debug', 'log', 'warn', 'error'].forEach((method_name) => {
 		_console = console[method_name];
 
-		if (print_config.filter.console_method.includes(method_name)) {
+		if (print_config.filter_console_method.includes(method_name)) {
 			console[method_name] = (...args) => {
 				let should_output_temp = true;
 
-				if (print_config.filter.output) {
+				if (print_config.filter_console_output) {
 					// if the output is defined in some way, do the extra checks, otherwise dont to save on performance
 					should_output_temp = should_output({ obj: args });
 					// _console(should_output_temp);
