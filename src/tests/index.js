@@ -191,6 +191,14 @@ const filter_method_and_output_test = () => {
 	console.warn('x');
 };
 
+const multiple_call_test = () => {
+	overrideConsole({});
+	console.log('test');
+
+	overrideConsole({});
+	console.log('test');
+};
+
 // context_test();
 // method_test();
 // single_item_in_console_test();
@@ -201,3 +209,4 @@ const filter_method_and_output_test = () => {
 // filter_method_test();
 // filter_output_test();
 // filter_method_and_output_test();
+// multiple_call_test();
