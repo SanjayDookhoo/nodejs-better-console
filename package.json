@@ -5,7 +5,7 @@
 	"main": "dist/cjs/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "nodemon src/tests/index.js",
+		"start": "BABEL_ENV=test nodemon --exec babel-node src/tests/index.js",
 		"build": "rm -rf dist && npm run build:esm && npm run build:cjs",
 		"build:esm": "BABEL_ENV=esmUnbundled babel src/lib --out-dir dist/esm",
 		"build:cjs": "BABEL_ENV=cjs babel src/lib --out-dir dist/cjs"
@@ -18,9 +18,6 @@
 		"@babel/core": "^7.15.5",
 		"@babel/preset-env": "^7.15.4",
 		"nodemon": "^2.0.12"
-	},
-	"dependencies": {
-		"@babel/polyfill": "^7.12.1"
 	},
 	"type": "module",
 	"module": "dist/esm/index.js",
