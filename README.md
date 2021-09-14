@@ -139,7 +139,10 @@ npm i dotenv
 ### Example
 
 .env
-`NODE_ENV=development`
+
+```javascript
+NODE_ENV = development;
+```
 
 index.js
 
