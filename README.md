@@ -15,11 +15,11 @@ Testing a Node.js script as it is right now is considerably different to how it 
 
 Fully Supported: CJS(CommonJS) and ESM(ECMAScript modules, ES6)
 
-# Install
-
-npm -i -D @sanjaydookhoo/nodejs-better-console
-
 # Usage
+
+# Basic and Intermediate Install
+
+npm -i @sanjaydookhoo/nodejs-better-console
 
 # Basic
 
@@ -129,20 +129,47 @@ const config = {
 console.log('this is a log message');
 ```
 
+## Advanced
+
+### Install
+
+npm i -D @sanjaydookhoo/nodejs-better-console
+npm i dotenv
+
+### Example
+
+.env
+`NODE_ENV=development`
+
+index.js
+
+```javascript
+import dotenv from 'dotenv';
+// cjs
+// const dotenv = require('dotenv')
+dotenv.config();
+
+if (process.env.NODE_ENV !== 'development') {
+	console.log('test');
+}
+
+if (process.env.NODE_ENV === 'development') {
+	const { overrideConsole } = await import(
+		'@sanjaydookhoo/nodejs-better-console'
+	);
+	// cjs
+	// const {overrideConsole} = require('@sanjaydookhoo/nodejs-better-console')
+
+	overrideConsole();
+
+	console.log('test');
+}
+```
+
 # Recommendation and Warning
 
 This package is a javascript console override, this means that the override itself is not isolated to this package only. For example, if this package was to be imported and used within your Node.js script, if another package attempts a console message [ie. console.log('some message')], this packages version of the console would be used to output the message.
 
 What this means is that if this package was to be used to create a Node.js package, it should NOT be left in the code and should ONLY be used for development purposes and not a production build.
 
-## Solution
-
-import dotenv from 'dotenv'
-
-```javascript
-if (process.env.NODE_ENV === 'development') {
-	import { overrideConsole } from '@sanjaydookhoo/nodejs-better-console';
-
-	overrideConsole();
-}
-```
+## See Advanced Usage for fix
