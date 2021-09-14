@@ -115,7 +115,7 @@ const should_output = ({ obj }) => {
 	}
 };
 
-let _console;
+// let _console; // place here for in line console logging for testing purposes
 
 const overrideConsole = (config) => {
 	if (config) {
@@ -123,7 +123,7 @@ const overrideConsole = (config) => {
 	}
 
 	['debug', 'log', 'warn', 'error'].forEach((method_name) => {
-		_console = console[method_name];
+		let _console = console[method_name]; // necessary to be placed here rather than globally on the file to prevent stack call overflow
 
 		if (print_config.filter_console_method.includes(method_name)) {
 			console[method_name] = (...args) => {
