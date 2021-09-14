@@ -43,7 +43,7 @@ Additional configuration parameters can be passed in to unlock the full potentia
 ### Default config if nothing is passed in
 
 ```javascript
-default config = {
+const config = {
     context: './',
     obj_depth: null,
     show_timestamp: true,
@@ -60,6 +60,7 @@ default config = {
 const config = {
     filter_console_output: 'cool',
 };
+overrideConsole(config);
 
 console.log('amazing');
 console.log('this is so cool');
@@ -71,6 +72,7 @@ console.log('this is so cool');
 const config = {
     filter_console_method: ['debug'],
 };
+overrideConsole(config);
 
 console.log('this is a log message');
 console.debug('this is a debug message');
@@ -83,6 +85,7 @@ const config = {
     filter_console_method: ['debug'],
     filter_console_output: 'cool',
 };
+overrideConsole(config);
 
 console.log('this is a log message');
 console.debug('this is a debug message');
@@ -95,6 +98,7 @@ console.debug('this is a cooler debug message');
 const config = {
     context: './src',
 };
+overrideConsole(config);
 
 console.log('this is a log message');
 ```
@@ -116,6 +120,8 @@ const obj = {
         },
     },
 };
+overrideConsole(config);
+
 console.log(obj);
 ```
 
@@ -125,6 +131,7 @@ console.log(obj);
 const config = {
     timestamp: false,
 };
+overrideConsole(config);
 
 console.log('this is a log message');
 ```
