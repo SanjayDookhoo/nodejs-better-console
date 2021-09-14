@@ -1,12 +1,14 @@
 {
 	"name": "@sanjaydookhoo/nodejs-better-console",
-	"version": "1.0.0",
+	"version": "1.0.4",
 	"description": "",
-	"main": "dist/index.js",
+	"main": "dist/cjs/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "nodemon src/tests/index.js",
-		"build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files"
+		"build": "rm -rf dist && npm run build:esm && npm run build:cjs",
+		"build:esm": "BABEL_ENV=esmUnbundled babel src/lib --out-dir dist/esm",
+		"build:cjs": "BABEL_ENV=cjs babel src/lib --out-dir dist/cjs"
 	},
 	"keywords": [],
 	"author": "",
@@ -21,11 +23,6 @@
 		"@babel/polyfill": "^7.12.1"
 	},
 	"type": "module",
-	"module": "dist/index.js",
-	"typings": "dist/index.d.ts",
-	"files": [
-		"dist",
-		"README.md"
-	],
+	"module": "dist/esm/index.js",
 	"repository": "https://github.com/SanjayDookhoo/nodejs-better-console.git"
 }
