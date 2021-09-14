@@ -44,11 +44,11 @@ Additional configuration parameters can be passed in to unlock the full potentia
 
 ```javascript
 default config = {
-	context: './',
-	obj_depth: null,
-	show_timestamp: true,
-	filter_console_method: ['debug', 'log', 'warn', 'error'],
-	filter_console_output: '',
+    context: './',
+    obj_depth: null,
+    show_timestamp: true,
+    filter_console_method: ['debug', 'log', 'warn', 'error'],
+    filter_console_output: '',
 }
 ```
 
