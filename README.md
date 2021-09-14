@@ -58,7 +58,7 @@ default config = {
 
 ```javascript
 const config = {
-	filter_console_output: 'cool',
+    filter_console_output: 'cool',
 };
 
 console.log('amazing');
@@ -69,7 +69,7 @@ console.log('this is so cool');
 
 ```javascript
 const config = {
-	filter_console_method: ['debug'],
+    filter_console_method: ['debug'],
 };
 
 console.log('this is a log message');
@@ -80,8 +80,8 @@ console.debug('this is a debug message');
 
 ```javascript
 const config = {
-	filter_console_method: ['debug'],
-	filter_console_output: 'cool',
+    filter_console_method: ['debug'],
+    filter_console_output: 'cool',
 };
 
 console.log('this is a log message');
@@ -93,7 +93,7 @@ console.debug('this is a cooler debug message');
 
 ```javascript
 const config = {
-	context: './src',
+    context: './src',
 };
 
 console.log('this is a log message');
@@ -103,18 +103,18 @@ console.log('this is a log message');
 
 ```javascript
 const config = {
-	obj_depth: 3,
+    obj_depth: 3,
 };
 const obj = {
-	a: {
-		b: {
-			c: {
-				d: {
-					e: 5,
-				},
-			},
-		},
-	},
+    a: {
+        b: {
+            c: {
+                d: {
+                    e: 5,
+                },
+            },
+        },
+    },
 };
 console.log(obj);
 ```
@@ -123,7 +123,7 @@ console.log(obj);
 
 ```javascript
 const config = {
-	timestamp: false,
+    timestamp: false,
 };
 
 console.log('this is a log message');
@@ -153,19 +153,19 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 if (process.env.NODE_ENV !== 'development') {
-	console.log('test');
+    console.log('test');
 }
 
 if (process.env.NODE_ENV === 'development') {
-	const { overrideConsole } = await import(
-		'@sanjaydookhoo/nodejs-better-console'
-	);
-	// cjs
-	// const {overrideConsole} = require('@sanjaydookhoo/nodejs-better-console')
+    const { overrideConsole } = await import(
+        '@sanjaydookhoo/nodejs-better-console'
+    );
+    // cjs
+    // const {overrideConsole} = require('@sanjaydookhoo/nodejs-better-console')
 
-	overrideConsole();
+    overrideConsole();
 
-	console.log('test');
+    console.log('test');
 }
 ```
 
