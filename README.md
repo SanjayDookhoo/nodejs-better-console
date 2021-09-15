@@ -37,6 +37,7 @@ console.debug('debug test');
 console.warn('warn test');
 console.error('error test');
 ```
+![alt text](https://github.com/SanjayDookhoo/nodejs-better-console/blob/media/basic.png?raw=true)
 
 ## Intermediate
 
@@ -67,6 +68,7 @@ overrideConsole(config);
 console.log('amazing');
 console.log('this is so cool');
 ```
+![alt text](https://github.com/SanjayDookhoo/nodejs-better-console/blob/media/intermediate_example_1.png?raw=true)
 
 #### Example 2 (Console Method Filter)
 
@@ -79,6 +81,7 @@ overrideConsole(config);
 console.log('this is a log message');
 console.debug('this is a debug message');
 ```
+![alt text](https://github.com/SanjayDookhoo/nodejs-better-console/blob/media/intermediate_example_2.png?raw=true)
 
 #### Example 3 (Console Output Filter and Method Filter)
 
@@ -93,6 +96,7 @@ console.log('this is a log message');
 console.debug('this is a debug message');
 console.debug('this is a cooler debug message');
 ```
+![alt text](https://github.com/SanjayDookhoo/nodejs-better-console/blob/media/intermediate_example_3.png?raw=true)
 
 #### Example 4 (Context)
 
@@ -104,6 +108,7 @@ overrideConsole(config);
 
 console.log('this is a log message');
 ```
+![alt text](https://github.com/SanjayDookhoo/nodejs-better-console/blob/media/intermediate_example_4.png?raw=true)
 
 #### Example 5 (Object Depth)
 
@@ -126,6 +131,7 @@ overrideConsole(config);
 
 console.log(obj);
 ```
+![alt text](https://github.com/SanjayDookhoo/nodejs-better-console/blob/media/intermediate_example_5.png?raw=true)
 
 #### Example 6 (Timestamp)
 
@@ -137,6 +143,7 @@ overrideConsole(config);
 
 console.log('this is a log message');
 ```
+![alt text](https://github.com/SanjayDookhoo/nodejs-better-console/blob/media/intermediate_example_6.png?raw=true)
 
 ## Advanced
 
@@ -177,6 +184,7 @@ if (process.env.NODE_ENV === 'development') {
     console.log('test console message from development');
 }
 ```
+![alt text](https://github.com/SanjayDookhoo/nodejs-better-console/blob/media/advanced.png?raw=true)
 
 # Recommendation and Warning
 
