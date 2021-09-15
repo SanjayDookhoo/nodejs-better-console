@@ -1,5 +1,5 @@
 import { overrideConsole } from '../lib/index.js';
-import test from './component/test.js';
+import componentConsoleLog from './component/componentConsoleLog.js';
 
 const context_test = () => {
 	overrideConsole({ context: '../' });
@@ -71,7 +71,7 @@ const timestamp_test = () => {
 const imported_module_test = () => {
 	overrideConsole();
 
-	test();
+	componentConsoleLog();
 };
 
 const filter_method_test = () => {
@@ -205,7 +205,7 @@ const multiple_call_test = () => {
 // multiple_items_in_console_test();
 // obj_depth_test_test();
 // timestamp_test();
-// imported_module_test();
+imported_module_test();
 // filter_method_test();
 // filter_output_test();
 // filter_method_and_output_test();
