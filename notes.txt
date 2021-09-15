@@ -1,7 +1,0 @@
-main resource used to create code
-	https://www.npmjs.com/package/node-debug-console
-
-to be noted https://github.com/sharletp/SharletPConsole.js
-	under the 'Typescript' heading, the import was done as follows
-		import { sharletpconsole as console } from "sharletpconsole.js"
-	this method may need to be implemented if i plan to package this
