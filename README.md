@@ -1,15 +1,17 @@
 # Description
 
-Testing a Node.js script as it is right now is considerably different to how it would be if javascript was to be tested on a browser. I believe that debugging in Node.js similarly featureful and easy. This package hopes to provided some of the additional functionality the browser provides for console messages.
+Testing a `node.js` script is considerably different than testing javascript in a browser. Debugging `node.js` can be fun and easy. This package provides additional functionality for debugging `node.js` via console messages.
 
 ## Features
 
 -   Timestamp for console message
 -   File path, file name, and line number for console message call
--   Jumping to call of console message in code when clicked using (ctrl + left click). This has only been confirmed to work with vscode, where the Node.js script is executed in the terminal provided by vscode. (Open vscode terminal: ctrl + ` )
--   Viewing Objects of any depth level no matter how nested it is
--   Filtering log messages by any of the following method types ['debug', 'log', 'warn', 'error']
--   Filtering console output. Works exactly as you would expect if you used the browser filter functionality. Supported: JS Primitive Datatypes, Arrays, Objects, Functions (Function Name), Classes (Class Name)
+-   Automatic traversal to location of console.log command via CTRL + LEFT CLICK. 
+     - Caveat: This has only been confirmed to work with vscode, where the `node.js` script is executed in the terminal provided by vscode. (Open vscode terminal: ctrl + ` )
+-   Viewing Objects of all depth levels
+-   Filtering log messages by any of the following method types: ['debug', 'log', 'warn', 'error']
+-   Filtering console output.
+     - Works exactly as you would expect if you used the browser filter functionality. Supported: JS Primitive Datatypes, Arrays, Objects, Functions (Function Name), Classes (Class Name)
 
 # Javascript Support
 
@@ -178,8 +180,8 @@ if (process.env.NODE_ENV === 'development') {
 
 # Recommendation and Warning
 
-This package is a javascript console override, this means that the override itself is not isolated to this package only. For example, if this package was to be imported and used within your Node.js script, if another package attempts a console message [ie. console.log('some message')], this packages version of the console would be used to output the message.
+This package is a javascript console override, this means that the override itself is not isolated to this package only. For example, if this package was to be imported and used within your `node.js` script, if another package attempts a console message [i.e., console.log('some message')], this package's version of the console would be used to output the message.
 
-What this means is that if this package was to be used to create a Node.js package, it should NOT be left in the code and should ONLY be used for development purposes and not a production build.
+### This package should ONLY be used for development purposes and not for production.
 
 ## See Advanced Usage for fix
