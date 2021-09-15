@@ -17,6 +17,7 @@
 		"@babel/cli": "^7.15.4",
 		"@babel/core": "^7.15.5",
 		"@babel/preset-env": "^7.15.4",
+		"dotenv": "^10.0.0",
 		"nodemon": "^2.0.12"
 	},
 	"type": "module",

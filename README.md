@@ -162,7 +162,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 if (process.env.NODE_ENV !== 'development') {
-    console.log('test');
+    console.log('test console message NOT from development');
 }
 
 if (process.env.NODE_ENV === 'development') {
@@ -174,7 +174,7 @@ if (process.env.NODE_ENV === 'development') {
 
     overrideConsole();
 
-    console.log('test');
+    console.log('test console message from development');
 }
 ```
 
