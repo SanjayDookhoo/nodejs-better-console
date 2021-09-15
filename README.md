@@ -6,12 +6,12 @@ Testing a `node.js` script is considerably different than testing javascript in 
 
 -   Timestamp for console message
 -   File path, file name, and line number for console message call
--   Automatic traversal to location of console.log command via CTRL + LEFT CLICK. 
-     - Caveat: This has only been confirmed to work with vscode, where the `node.js` script is executed in the terminal provided by vscode. (Open vscode terminal: ctrl + ` )
+-   Automatic traversal to location of console.log command via CTRL + LEFT CLICK.
+    -   Caveat: This has only been confirmed to work with vscode, where the `node.js` script is executed in the terminal provided by vscode. (Open vscode terminal: CTRL + ` )
 -   Viewing Objects of all depth levels
 -   Filtering log messages by any of the following method types: ['debug', 'log', 'warn', 'error']
 -   Filtering console output.
-     - Works exactly as you would expect if you used the browser filter functionality. Supported: JS Primitive Datatypes, Arrays, Objects, Functions (Function Name), Classes (Class Name)
+    -   Works exactly as you would expect if you used the browser filter functionality. Supported: JS Primitive Datatypes, Arrays, Objects, Functions (Function Name), Classes (Class Name)
 
 # Javascript Support
 
@@ -51,7 +51,7 @@ const config = {
     show_timestamp: true,
     filter_console_method: ['debug', 'log', 'warn', 'error'],
     filter_console_output: '',
-}
+};
 ```
 
 ### Usage of config
@@ -142,22 +142,22 @@ console.log('this is a log message');
 
 ### Install
 
-npm i -D @sanjaydookhoo/nodejs-better-console
+npm i -D @sanjaydookhoo/nodejs-better-console<br/>
 npm i dotenv
 
 ### Example
 
 .env
 
-```javascript
-NODE_ENV = development;
+```
+NODE_ENV=development
 ```
 
 index.js
 
 ```javascript
 import dotenv from 'dotenv';
-// cjs
+// CJS import example
 // const dotenv = require('dotenv')
 dotenv.config();
 
@@ -169,7 +169,7 @@ if (process.env.NODE_ENV === 'development') {
     const { overrideConsole } = await import(
         '@sanjaydookhoo/nodejs-better-console'
     );
-    // cjs
+    // CJS import example
     // const {overrideConsole} = require('@sanjaydookhoo/nodejs-better-console')
 
     overrideConsole();
