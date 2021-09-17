@@ -1,6 +1,3 @@
-// https://dev.to/remshams/rolling-up-a-multi-module-system-esm-cjs-compatible-npm-library-with-typescript-and-babel-3gjg
-// https://github.com/remshams/node-module-esm
-
 const sharedPresets = [];
 const shared = {
 	presets: sharedPresets,

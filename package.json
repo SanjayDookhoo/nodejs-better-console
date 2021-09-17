@@ -1,8 +1,14 @@
 {
-	"name": "@sanjaydookhoo/nodejs-better-console",
-	"version": "1.0.9",
-	"description": "",
+	"name": "nodejs-better-console",
+	"author": "Sanjay Dookhoo",
+	"version": "1.0.0",
+	"description": "Console messages will now include timestamp, file path and line number (allowing automatic traversal to location in file), viewing Objects of all depth levels, filtering by text and console method(log, debug, warn, error).",
+	"keywords": ["nodejs", "console", "debug", "timestamp", "path", "filter"],
+	"type": "module",
 	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"license": "ISC",
+	"repository": "https://github.com/SanjayDookhoo/nodejs-better-console.git",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "BABEL_ENV=test nodemon --exec babel-node src/tests/index.js",
@@ -10,17 +16,11 @@
 		"build:esm": "BABEL_ENV=esmUnbundled babel src/lib --out-dir dist/esm",
 		"build:cjs": "BABEL_ENV=cjs babel src/lib --out-dir dist/cjs"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
 	"devDependencies": {
 		"@babel/cli": "^7.15.4",
 		"@babel/core": "^7.15.5",
 		"@babel/preset-env": "^7.15.4",
 		"dotenv": "^10.0.0",
 		"nodemon": "^2.0.12"
-	},
-	"type": "module",
-	"module": "dist/esm/index.js",
-	"repository": "https://github.com/SanjayDookhoo/nodejs-better-console.git"
+	}
 }

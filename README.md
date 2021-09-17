@@ -1,3 +1,24 @@
+[![NodeJs][nodejs-image]][nodejs-url] 
+[![Maintained Status][maintained-image]][maintained-url] 
+[![Ask Me Anything][ask-image]][ask-url] 
+[![Issues Count][issues-image]][issues-url]
+[![Size][size-image]][size-url] 
+
+[nodejs-image]:https://img.shields.io/badge/Node.js-43853D
+[nodejs-url]:https://nodejs.org/
+
+[maintained-image]:https://img.shields.io/badge/Maintained%3F-yes-green.svg
+[maintained-url]:https://github.com/SanjayDookhoo/nodejs-better-console
+
+[ask-image]:https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg
+[ask-url]:mailto:sanjaydookhoo@msn.com?subject=nodejs-better-console
+
+[issues-image]:https://img.shields.io/github/issues/SanjayDookhoo/nodejs-better-console.svg
+[issues-url]:https://github.com/SanjayDookhoo/nodejs-better-console/issues
+
+[size-image]:https://img.shields.io/bundlephobia/min/nodejs-better-console
+[size-url]:https://www.npmjs.com/package/nodejs-better-console
+
 # Description
 
 Testing a `node.js` script is considerably different than testing javascript in a browser. Debugging `node.js` can be fun and easy. This package provides additional functionality for debugging `node.js` via console messages.
