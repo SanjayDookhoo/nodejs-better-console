@@ -1,7 +1,7 @@
 {
 	"name": "nodejs-better-console",
 	"author": "Sanjay Dookhoo",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Console messages will now include timestamp, file path and line number (allowing automatic traversal to location in file), viewing Objects of all depth levels, filtering by text and console method(log, debug, warn, error).",
 	"keywords": ["nodejs", "console", "debug", "timestamp", "path", "filter"],
 	"type": "module",

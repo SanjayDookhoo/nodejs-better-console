@@ -42,7 +42,7 @@ Fully Supported: CJS(CommonJS) and ESM(ECMAScript modules, ES6)
 
 # Basic and Intermediate Install
 
-npm -i nodejs-better-console
+npm i nodejs-better-console
 
 # Basic
 
