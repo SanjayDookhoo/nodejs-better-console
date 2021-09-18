@@ -12,7 +12,7 @@ if (process.env.NODE_ENV === 'development') {
         '../../lib/index.js'
     );
     // CJS import example
-    // const {overrideConsole} = require('@sanjaydookhoo/nodejs-better-console')
+    // const {overrideConsole} = require('../../lib/index.js')
 
     overrideConsole();
 

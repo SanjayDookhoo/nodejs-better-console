@@ -21,7 +21,7 @@
 
 # Description
 
-Testing a `node.js` script is considerably different than testing javascript in a browser. Debugging `node.js` can be fun and easy. This package provides additional functionality for debugging `node.js` via console messages.
+Testing a `node.js` script is considerably different than testing javascript in a browser. Debugging `node.js` can be fun and easy. This package provides additional functionality for debugging `node.js` via console messages. Only one function call is necessary at the entrance JavaScript file (ie. `index.js`) to override console functionality throughout the script.
 
 ## Features
 
@@ -42,14 +42,14 @@ Fully Supported: CJS(CommonJS) and ESM(ECMAScript modules, ES6)
 
 # Basic and Intermediate Install
 
-npm -i @sanjaydookhoo/nodejs-better-console
+npm -i nodejs-better-console
 
 # Basic
 
 ```javascript
-import { overrideConsole } from '@sanjaydookhoo/nodejs-better-console';
+import { overrideConsole } from 'nodejs-better-console';
 // CJS import example
-// const {overrideConsole} = require('@sanjaydookhoo/nodejs-better-console');
+// const {overrideConsole} = require('nodejs-better-console');
 
 overrideConsole();
 
@@ -170,7 +170,7 @@ console.log('this is a log message');
 
 ### Install
 
-npm i -D @sanjaydookhoo/nodejs-better-console<br/>
+npm i -D nodejs-better-console<br/>
 npm i dotenv
 
 ### Example
@@ -195,10 +195,10 @@ if (process.env.NODE_ENV !== 'development') {
 
 if (process.env.NODE_ENV === 'development') {
     const { overrideConsole } = await import(
-        '@sanjaydookhoo/nodejs-better-console'
+        'nodejs-better-console'
     );
     // CJS import example
-    // const {overrideConsole} = require('@sanjaydookhoo/nodejs-better-console')
+    // const {overrideConsole} = require('nodejs-better-console')
 
     overrideConsole();
 
