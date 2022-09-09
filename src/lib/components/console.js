@@ -117,6 +117,12 @@ const should_output = ({ obj }) => {
 
 // let _console; // place here for in line console logging for testing purposes
 
+/**
+ * Override console functionality throughout the script
+ *
+ * @param {object} config - the config param
+ *
+ */
 const overrideConsole = (config) => {
 	if (config) {
 		setPrintConfig(config);

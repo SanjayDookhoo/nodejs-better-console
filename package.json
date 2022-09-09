@@ -1,26 +1,33 @@
 {
 	"name": "nodejs-better-console",
 	"author": "Sanjay Dookhoo",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Console messages will now include timestamp, file path and line number (allowing automatic traversal to location in file), viewing Objects of all depth levels, filtering by text and console method(log, debug, warn, error).",
 	"keywords": ["nodejs", "console", "debug", "timestamp", "path", "filter"],
 	"type": "module",
-	"main": "dist/cjs/index.js",
-	"module": "dist/esm/index.js",
+	"main": "dist/index.js",
+	"typings": "dist/index.js",
 	"license": "ISC",
 	"repository": "https://github.com/SanjayDookhoo/nodejs-better-console.git",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "BABEL_ENV=test nodemon --exec babel-node src/tests/index.js",
-		"build": "rm -rf dist && npm run build:esm && npm run build:cjs",
-		"build:esm": "BABEL_ENV=esmUnbundled babel src/lib --out-dir dist/esm",
+		"npm-publish": "npm run build && clean-package && cp .gitignore .npmignore && echo '\n/src' >> .npmignore && npm publish && clean-package restore",
+		"build": "rm -rf dist && npm run build:cjs",
 		"build:cjs": "BABEL_ENV=cjs babel src/lib --out-dir dist/cjs"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.15.4",
 		"@babel/core": "^7.15.5",
+		"@babel/node": "^7.18.10",
 		"@babel/preset-env": "^7.15.4",
+		"clean-package": "^2.1.1",
 		"dotenv": "^10.0.0",
 		"nodemon": "^2.0.12"
+	},
+	"clean-package": {
+		"remove": [
+			"type"
+		]
 	}
 }
