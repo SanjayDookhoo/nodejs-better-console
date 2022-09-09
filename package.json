@@ -1,7 +1,7 @@
 {
 	"name": "nodejs-better-console",
 	"author": "Sanjay Dookhoo",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Console messages will now include timestamp, file path and line number (allowing automatic traversal to location in file), viewing Objects of all depth levels, filtering by text and console method(log, debug, warn, error).",
 	"keywords": ["nodejs", "console", "debug", "timestamp", "path", "filter"],
 	"type": "module",
@@ -14,7 +14,7 @@
 		"start": "BABEL_ENV=test nodemon --exec babel-node src/tests/index.js",
 		"npm-publish": "npm run build && clean-package && cp .gitignore .npmignore && echo '\n/src' >> .npmignore && npm publish && clean-package restore",
 		"build": "rm -rf dist && npm run build:cjs",
-		"build:cjs": "BABEL_ENV=cjs babel src/lib --out-dir dist/cjs"
+		"build:cjs": "BABEL_ENV=cjs babel src/lib --out-dir dist"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.15.4",
